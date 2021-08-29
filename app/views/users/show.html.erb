@@ -1,5 +1,9 @@
 <h2><%= @user.username %> </h2> has commented on the following posts:
 
+
+<!--Iterate over each post, link to the post title-->
 <% @user.posts.each do |post| %>
   <%= link_to post.title, post_path(post) %>
 <% end %>
+
+<!-We want our users to see a list of all the posts that they've commented on --->
